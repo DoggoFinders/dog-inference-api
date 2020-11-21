@@ -3,7 +3,7 @@ from logging.config import dictConfig
 from pathlib import Path
 
 from flask import Flask, render_template
-from flask.logging import default_handler
+from flask_cors import CORS
 
 from .api import api
 
@@ -44,6 +44,7 @@ def _configure_app(app):
 
 def create_app():
     app = Flask("attestation", template_folder="dog_api/templates")
+    CORS(app)
     _configure_app(app)
     _configure_logging(app)
 
