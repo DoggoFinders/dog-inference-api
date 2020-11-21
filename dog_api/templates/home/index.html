@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Doggo uploader</title>
+</head>
+<body>
+    <p>Add the image below</p>
+    <form action="{{ url_for('api.post_image') }}" method="post">
+        <input type="file" name="image" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

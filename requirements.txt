@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+torch
+torchvision
+scipy
+python-dotenv
